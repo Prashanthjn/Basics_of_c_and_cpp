@@ -37,5 +37,7 @@ int main(){
     s3.marks=80;
     s3.display();
 
+    
+    cout<<sizeof(s1);  //padding uses more space to increase speeed 
 
 }
