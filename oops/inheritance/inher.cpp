@@ -1,30 +1,20 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-class Human{        //all the 3 can be accessed within the class
-    
-    private:        //only within class
-    int b;
-
-    protected:   
-    int c;
-                        //pri>pro>pub
+class student{                         //parent class
     public:
-    int a;
-
-    void print(){
-        a=200;
-        b=300;
-        c=400;
-    }
-
+        string name;
+        int roll_num,age;
 };
 
-int main(){
-    Human h1;
-    h1.a=20;
-    // h1.b=20;
-    // h1.c=20;
-    h1.print();
-
+class application: private student{     //child class
+    int application_num=20;
+       
+};
+                                        //when we inhwrit the child class follow this rule while inheriting
+int main(){                             //private>protected>public
+    student s1;                         
+    application a1;                 
+    s1.name="prashi";
+    a1.application_num=20;       //can't access bcz it's private      
 }
